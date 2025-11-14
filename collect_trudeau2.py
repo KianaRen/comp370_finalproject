@@ -1,3 +1,8 @@
+import requests
+import time
+import json
+
+API_TOKEN = "xeuLSxZsvD0R1l1qGKhjwfKZCck0pkQkWFKW2fVI"
 TARGET_ARTICLE_COUNT = 100
 LIMIT = 3
 SEARCH_TERM = "Trudeau"
