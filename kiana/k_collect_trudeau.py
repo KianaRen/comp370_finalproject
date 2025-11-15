@@ -2,17 +2,18 @@ import requests
 import time
 import json
 
-API_TOKEN = "xeuLSxZsvD0R1l1qGKhjwfKZCck0pkQkWFKW2fVI"
-TARGET_ARTICLE_COUNT = 100
-LIMIT = 3
+API_TOKEN = "A88Nf9FupuPkRglgmyiifc0YqGzyRNf7mGHP5U7w" # kiana's token
 SEARCH_TERM = "Trudeau"
+LIMIT = 3
+TARGET_ARTICLE_COUNT = 100
 LOCALE = "us,ca"
 PUBLISHED_AFTER = "2024-11-14"
 SORT = "relevance_score"
 BASE_URL = "https://api.thenewsapi.com/v1/news/all"
 
 all_articles = []
-page = 1
+page = 129 # last time end at 156
+
 #Antoine: 1-60
 #Kiana: 61-120
 #Zahra: 121-180
@@ -51,7 +52,8 @@ while len(all_articles) < TARGET_ARTICLE_COUNT:
 
 all_articles = all_articles[:TARGET_ARTICLE_COUNT]
 
-with open("trudeau_articles.json", "w", encoding="utf-8") as f:
+with open("trudeau_articles_page129.json", "w", encoding="utf-8") as f:
     json.dump(all_articles, f, indent=4)
 
-print(f"\nFinished! Saved {len(all_articles)} articles to trudeau_articles.json")
+print(f"\nFinished! Saved {len(all_articles)} articles to trudeau_articles_page129.json")
+
