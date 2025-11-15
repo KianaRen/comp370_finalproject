@@ -12,7 +12,7 @@ SORT = "relevance_score"
 BASE_URL = "https://api.thenewsapi.com/v1/news/all"
 
 all_articles = []
-page = 121
+page = 155
 #Antoine: 1-60
 #Kiana: 61-120
 #Zahra: 121-180
