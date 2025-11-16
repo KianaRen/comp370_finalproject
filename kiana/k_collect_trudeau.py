@@ -12,7 +12,7 @@ SORT = "relevance_score"
 BASE_URL = "https://api.thenewsapi.com/v1/news/all"
 
 all_articles = []
-page = 129 # last time end at 156
+page = 173 #last collected to page 205
 
 #Antoine: 1-60
 #Kiana: 61-120
@@ -52,8 +52,8 @@ while len(all_articles) < TARGET_ARTICLE_COUNT:
 
 all_articles = all_articles[:TARGET_ARTICLE_COUNT]
 
-with open("trudeau_articles_page129.json", "w", encoding="utf-8") as f:
+with open("trudeau_articles_page173.json", "w", encoding="utf-8") as f:
     json.dump(all_articles, f, indent=4)
 
-print(f"\nFinished! Saved {len(all_articles)} articles to trudeau_articles_page129.json")
+print(f"\nFinished! Saved {len(all_articles)} articles to trudeau_articles_page173.json")
 
